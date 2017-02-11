@@ -6,4 +6,5 @@ body {
   body h2 {
     width: 1000px;
     height: 1000px;
-    text-align: center; }
+    text-align: center;
+    color: lime; }
