@@ -1,9 +1,11 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "echo",
+    "command": "gulp",
     "isShellCommand": true,
-    "args": ["css_animation.scss", "css_animation.css"],
-    "showOutput": "always"
+    "tasks": [{
+        "taskName": "default",
+        "isBuildCommand": true,
+        "showOutput": "always",
+        "isWatching": true
+    }]
 }

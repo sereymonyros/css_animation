@@ -1,6 +1,19 @@
+@import "color";
+
+
 body {
-    color: red;
+    color:$red;
     h1 {
         background-color: yellow;
+        float: none;
+    }
+    h2 {
+        width: 1000px;
+        height: 1000px;
+        text-align: center;
+
     }
 }
+ 
+
+

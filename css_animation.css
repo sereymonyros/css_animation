@@ -1,4 +1,9 @@
 body {
-  color: red; }
+  color: blue; }
   body h1 {
-    background-color: yellow; }
+    background-color: yellow;
+    float: none; }
+  body h2 {
+    width: 1000px;
+    height: 1000px;
+    text-align: center; }
