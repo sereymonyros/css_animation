@@ -1,0 +1,20 @@
+// The order of these imports matter
+@import "reset";
+@import "colors";
+@import "mixins";
+@import "master";
+body {
+    color: red !important;
+    h1 {
+        color: yellow;
+    }
+    h2 {
+        color: green;
+    }
+    h3 {
+        color: black;
+    }
+    h4 {
+        color: salmon;
+    }
+}
