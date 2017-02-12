@@ -42,3 +42,6 @@ body {
     left: 0; }
   100% {
     left: 200px; } }
+
+#mony {
+  color: red; }
