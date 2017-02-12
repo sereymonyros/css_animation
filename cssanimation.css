@@ -23,25 +23,25 @@ body {
   0% {
     left: 0; }
   100% {
-    left: 200px; } }
+    left: 1000px; } }
 
 @-moz-keyframes A {
   0% {
     left: 0; }
   100% {
-    left: 200px; } }
+    left: 1000px; } }
 
 @-o-keyframes A {
   0% {
     left: 0; }
   100% {
-    left: 200px; } }
+    left: 1000px; } }
 
 @keyframes A {
   0% {
     left: 0; }
   100% {
-    left: 200px; } }
+    left: 1000px; } }
 
 #mony {
   color: blue; }
