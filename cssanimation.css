@@ -2,46 +2,91 @@
   margin: 0;
   padding: 0; }
 
+html,
 body {
-  color: red; }
-  body h1 {
-    background-color: yellow;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    -webkit-animation: A 5s linear;
-    -moz-animation: A 5s linear;
-    -o-animation: A 5s linear;
-    animation: A 5s linear; }
-  body h2 {
-    width: 1000px;
-    height: 1000px;
-    text-align: center;
-    color: darkgoldenrod; }
+  margin: 0 auto; }
 
-@-webkit-keyframes A {
+@-webkit-keyframes stretch {
   0% {
-    left: 0; }
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%; }
+  50% {
+    background-color: green; }
   100% {
-    left: 1000px; } }
+    transform: scale(1.5);
+    background-color: blue; } }
 
-@-moz-keyframes A {
+@-moz-keyframes stretch {
   0% {
-    left: 0; }
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%; }
+  50% {
+    background-color: green; }
   100% {
-    left: 1000px; } }
+    transform: scale(1.5);
+    background-color: blue; } }
 
-@-o-keyframes A {
+@-o-keyframes stretch {
   0% {
-    left: 0; }
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%; }
+  50% {
+    background-color: green; }
   100% {
-    left: 1000px; } }
+    transform: scale(1.5);
+    background-color: blue; } }
 
-@keyframes A {
+@keyframes stretch {
   0% {
-    left: 0; }
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%; }
+  50% {
+    background-color: green; }
   100% {
-    left: 1000px; } }
+    transform: scale(1.5);
+    background-color: blue; } }
 
-#mony {
-  color: white; }
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.cssAnimation div {
+  width: 250px;
+  height: 250px; }
+
+.cssAnimation .stretch {
+  -webkit-animation: stretch 3s ease-out 3s infinite alternate;;
+  -moz-animation: stretch 3s ease-out 3s infinite alternate;;
+  -o-animation: stretch 3s ease-out 3s infinite alternate;;
+  animation: stretch 3s ease-out 3s infinite alternate;; }
+
+.cssAnimation .opacity {
+  background: green;
+  -webkit-animation: opacity 3s linear 3s infinite alternate;;
+  -moz-animation: opacity 3s linear 3s infinite alternate;;
+  -o-animation: opacity 3s linear 3s infinite alternate;;
+  animation: opacity 3s linear 3s infinite alternate;; }
