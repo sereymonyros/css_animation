@@ -1,13 +1,20 @@
 .cssAnimation {
-    div {
-        width: 250px;
-        height: 250px;
-    }
-    .stretch {
-        @include animation('stretch 3s ease-out 3s infinite alternate;');
-    }
-    .opacity {
-        background: $green;
-        @include animation('opacity 3s linear 3s infinite alternate;');
+    background: black;
+    .imageContainer {
+        margin: 0 auto;
+        img {
+            width: 400px;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+            border: 10px solid $pink;
+            @include opacity();
+            @include transform();
+            &:hover,
+            &:focus {
+                @include opacity(1);
+                @include animation('thumbTilt 1s ease-in both');
+            }
+        }
     }
 }

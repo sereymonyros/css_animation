@@ -1,11 +1,149 @@
 <html>
-
-
     <link rel="stylesheet" type="text/css" href="cssanimation.css">
 
+    <!--In case of fallback css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @-webkit-keyframes thumbTilt {
+            0% {
+                transform: perspective(400px) rotateY(8deg) scale(1);
+                -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+                -o-transform: perspective(400px) rotateY(8deg) scale(1);
+            }
+            20% {
+                transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+            }
+            100% {
+                transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+            }
+        }
+        
+        @-moz-keyframes thumbTilt {
+            0% {
+                transform: perspective(400px) rotateY(8deg) scale(1);
+                -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+                -o-transform: perspective(400px) rotateY(8deg) scale(1);
+            }
+            20% {
+                transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+            }
+            100% {
+                transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+            }
+        }
+        
+        @-o-keyframes thumbTilt {
+            0% {
+                transform: perspective(400px) rotateY(8deg) scale(1);
+                -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+                -o-transform: perspective(400px) rotateY(8deg) scale(1);
+            }
+            20% {
+                transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+            }
+            100% {
+                transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+            }
+        }
+        
+        @keyframes thumbTilt {
+            0% {
+                transform: perspective(400px) rotateY(8deg) scale(1);
+                -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+                -o-transform: perspective(400px) rotateY(8deg) scale(1);
+            }
+            20% {
+                transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+            }
+            100% {
+                transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+            }
+        }
+        
+        .cssAnimation {
+            background: black;
+        }
+        
+        .cssAnimation .imageContainer {
+            margin: 0 auto;
+        }
+        
+        .cssAnimation .imageContainer img {
+            width: 400px;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+            border: 10px solid pink;
+            opacity: 0.5;
+            -webkit-opacity: 0.5;
+            -moz-opacity: 0.5;
+            -o-opacity: 0.5;
+            transform: perspective(400px) rotateY(8deg) scale(1);
+            -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+            -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+            -o-transform: perspective(400px) rotateY(8deg) scale(1);
+        }
+        
+        .cssAnimation .imageContainer img:hover,
+        .cssAnimation .imageContainer img:focus {
+            opacity: 1;
+            -webkit-opacity: 1;
+            -moz-opacity: 1;
+            -o-opacity: 1;
+            -webkit-animation: thumbTilt 1s ease-in both;
+            -moz-animation: thumbTilt 1s ease-in both;
+            -o-animation: thumbTilt 1s ease-in both;
+            animation: thumbTilt 1s ease-in both;
+        }
+    </style>
+
     <body class="cssAnimation">
-        <div class="stretch"></div>
-        <div class="opacity"></div>
+        <div class="imageContainer">
+            <img src="https://lh3.googleusercontent.com/7w7Ka7X9pRWWQUhzZwmqBEl3iKWzKutaHamhmgZn0nuEZ5YoINiO_9lyp7-KZW4FRXNCb2Ou9h4c3fxpYQMGRbCaYWiYZVLRg87ZR1b4Tkm-2iJE7v2COcrimuVT6c4yi2ytNaxgT1wpUIXf8Swn-cc3h97ldFx4ZdihufSiU7X17yZDDlb7QPyriRgGxUDmvFZtEABhOtxICTeqmZW3MC-vLyV8uwIL0Rc-9GUsiwW0ZFC3Veha0wlkSCKRgD7z6UAX-MZbfWsW56NkIJD4X45IYYkBV6x5ZKJf4kPxb_U8FIC_ve-YcI2Yre-D23P2yMmSXkZQ4V5HNlGVpsvGsQmIqCD9bwnYzGgGdueVMF4hkdesH8DoCwjKJQmPrDkV9eqUHNzwCiOxthgoMcElgfLhu9LuyRDKZNZU0duxJlFG6xhEhCvexjK3xObnq7a_TgLacwmVEoXVd0OGBoI62jPH_ML4Ehnt8wBY50CyyYRn8NxpLQk7dZ9jRhvPUxqRSYfgwmMQiUPPiIxSaPxLeCFs3HuQXyP-_xBZGyN0_r78IMAsmARpaXxsQuBFifHNRjM5A4tkju5vl95im4KQ3HlMLOgReVsvW1Alji-hmgmUfvgj=w600-h400-no"
+                alt="Angkor Wat temple" />
+            <img src="https://lh3.googleusercontent.com/ztuSRQE6H4dHl9O6YT-pXk6lPqbaiaGEBwRugGpjHLbXKYM23v1vQBrSMt5Vz9Hodv2tkq-LnSAaakxbHdm884WesEjgJUQLoYKhWHvuJP8xQsA7XUzpK1mTutx1Vkm-4G3BrXIQnOz5fBWuB0pHYxc67lK5jUhEBl_j_W_Udn9Dkv4c1siiFlCaesg9jQpB74NEBo8c3fQqkyZJHIFnCa8z2UvdKeLFa45HTs1QIF8MtHFDBtV6Z7AQpuK5vxvx8E6on1-L05xtNrWbcl6EMACAzqdJqwgKvPDxKeF4h_IvDl3E9O7ksPEUTLhvkCZFwRrBkEHi8SKNfVZ21Lej6T06kKc6lt2PaQ8gQjC2sG1AUIdx0TsJsIs4Xe6PQEVXIBlpAqjzSjbcMRpKIeotW3-ximeA1ie7g2RuWEpIxgNYIChaprpNqKDK8w_8_H6DoD137WGUOcDVkPViMjkdHrwX1RbpwPUGqLODxgSzbmErrMNOqrno6hciFVBuh5meZIfyKOiEQtU-tMAOGRztuaIEG5skMozo7oe6vQ3FQVsNudE6cOPl5Do5cTgqjoY6sb2Ye1hysg0jMrl69kTtTjH9-KPwXMDAhGusRNt_l8JQ8mcMB0q2FLDyfxhku38LDl2AKWgB4ChW2E4-bPD-9ohi4dea3w5ohF2qwkTVqA=w980-h651-no"
+                alt="Kep Province" />
+            <img src="https://lh3.googleusercontent.com/QmPpPVUNQDZRHlkWHqNiNiTAMkopyEftAkF79QshOE731qeAoHsZypDUrwHx0YIRriEJUsFldwSFBtKDrOnYueW_1AeGP1U4eosMtfkXK-HM1VaaV59XVCcCpDVs4Qm0oK1QDaHL8Op0mBV442obxcDgobAdZ7jxbJPQcP6xoASmk27kJSlgf2_HbN5qVnhBJPCB9LddXYzNOoWYsYlLeywC3UJYvcxZY1dUdE6_LpUL5yuV9dVc0h3nZ4-lu4MuIZwmt9oCYvR13Bql04FCdR-hmvpV1UJoHbfHOhSAcHv9n6swkjiwb81k7cb1QyX2-H8EW9NLa7rOqrWjLxgoHyRqfyNFIYDjQUGsf7BCQr28g6vIsmJIsYs452wPDnawZPDFvHN1Uz0p4ZqhyR7KQ1X-NutX8kGHSPvGJdkUPQSqlR6X2qFH2FgSxMog4QpJ-MjqtLyCJ5TscV2wwVBy0kn5NUfEfP4ANAYaj8POZ6PHbeyednKSK9ukhTEsRPFoOLzfTo077_1xXto3e87hXeUCf5eBgNGt4WUT7BUnpbJbmd58KccfUzuB3UFf6wX8QqIxsBsLfgp5cwEzFjczs2xoUDfDC13wgHABF03M8tUt6_8o=w1379-h919-no"
+                alt="Bayon Temple" />
+            <img src="https://lh3.googleusercontent.com/kfQChOQaoOtluOuLIsiz0ICh6m03MgYcuywlju1AJhm1oVdb-Vq0cpMLMSwvpGh8rNd0B72TaB12gLWHI4BrOFXGHyMpGwsWb5N0Tvwe3tXIstt1KOp_EDkpWS5Jk1nJ_7Zo_MEhnapM9ctPfcun6ZyveiLE6iousnL1--vJoWiv-7y4aqMs14-Wy5tNxuni9ekoudNUc67vpvWIwe_qiWO-y8DJWYp1MU1md7sNS2KUSUHrG9oq6tU8NE3TXLG-RsxpCjCQZxdFInQPL1xrjip5g-FngGKauR6w4hgPGLgU3p-pdwS14cCRkgFHzcoDWuQ-P6hEKEb78tdpgxULxWgD-ODs4MjKUr-T4cq4UzZla5mDkg_zzaffsTCP1czBjmM4p71RhA2kpBRLpvwSDA9KP_MQEXO0LLJqc_h2Os8LIMfCu-n1tQta3k2e_t1OXk7DTqSQDHKSM1GMaflRpToEmMFGD-8yEFk2jmBTg-rp-cepZ7UF1J_BOjl04MR8l-R9fswLjUBS3EUd2ZuVD392UGPGQxyCFn6JFM5Uwr09uP9drUb41thZDq66CQCHc3olJ91J5EeGG2WnfucVngrta2-GIJdZK_R9o81UFSul3YtwuKZo=w690-h388-no"
+                alt="Island in Cambodia" />
+            <img src="https://lh3.googleusercontent.com/EjCLVi_xm6ooXmxzjapwtw2QgAoeYFbIZWniF--9rwjd-760euDXW-S1_AkweTsIDBe0h0UL7xptZ4uoT7rTK7HHzlGea664i56qlEcQPWQIOgohxjV6g1M2yp0Vu99eE9nFJ2Kxe3PuoqxTa3shySSweJz8IjVKt8qQdymncWf9QEaIfShNzaFHDyN5sRz_EdduWcnZ2LxV1eu770d67Nxv0CuW1kWo-f0tkRp9ow_BgCHTDVdG6gjfBx9Qu0HUWilXhWZ7IUr1ia5d-Aviw1hVX1_9_dJCNxJZ61-Wf6Y-XDawiRet_yQnVF8P8SxCyF4MlMDJHyTZ3FQllJUdkh_-lLCZ5iyn_ZjzMaxB0fa8agI4jZG6-wqegBawMkAn86Hb-Ra588kIOpdK8gaM_xh8aS5Nnl03Yip820Aeakbm3WM1kG9MaT526zLwSvZxhyosgHhGzhBCss-NbzytmpgYGL-mu3Pm6SkFEBdWuc5chmVhn7_gc8B7Z0H6J_wmHdIpTQ9sQyEsaypgnwKpQnIYGB6nIjITzT9E0AqNejiPtSmKe5N9jgv7V65VLEBx_z8lieQu55oZ1BpZsGLAoBDmZ7ppGyb7BEw2ligGW0j469VZq_pA=w640-h480-no"
+                alt="Tree in Cambodia" />
+            <img src="https://lh3.googleusercontent.com/VwkDRUfzP8nMOOI7CyixLGbKF1-g6cliN8o-yProWvrFthGmU_tSXFUd5iOGTeY7PPaO5eDZeoBlCKGmuwaNSjaW7pCV_5rd5zFRvOiON5g8DtgjPhIJrgQFtFwhZP3Tq0CyZpN5c8MpB6Yp-Zhx6ReKekkKidS26dfUHcM9MH7jJ3r0U6l1bpoiu3pL3gETMFgpg_A_UIOtzzW75ncQgurKLQUyE7NwbtjRsoUpmxlnIgXRRE2jefs4G6-WwJMns8xoEeH_BpEqi4C3yHq9FWJz1m61PfnugiR041mIsqLtxO7I0oDPfoKd_F5X2qHnrXorjbT94cY953eZMBYtvrDCPKnObTVTsZ7Ec7EXnePWKnhhhUzilZFykKplZZfUdgMq69Zd3Elcwx8MR-BLAFQb26YomG6b_gt7-UCCV9Ds3z1I_oZfF0YnS-_wWg0PrTOyEGJkCr1kndpFq5klQYnRyDwVM4DYD1wzfhxyu7Ehp_x16WM9FmO_p3KBoGbpzWDUMqFtDYrtKYbuweDTi_AGKkkA68dUiCsXmvBDmd8doY68pbkjCPc_pubZbaa1lRotmxEbqrWU5ma9UZX7-XUxTZdao4TpQ8qzxxCUhXU0JePM=w685-h384-no"
+                alt="Cambodia beautiful women" />
+        </div>
     </body>
 
 </html>

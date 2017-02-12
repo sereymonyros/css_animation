@@ -1,92 +1,124 @@
 * {
-  margin: 0;
-  padding: 0; }
+    margin: 0;
+    padding: 0;
+}
 
-html,
-body {
-  margin: 0 auto; }
+@-webkit-keyframes thumbTilt {
+    0% {
+        transform: perspective(400px) rotateY(8deg) scale(1);
+        -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+        -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+        -o-transform: perspective(400px) rotateY(8deg) scale(1);
+    }
+    20% {
+        transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+    }
+    100% {
+        transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+    }
+}
 
-@-webkit-keyframes stretch {
-  0% {
-    transform: scale(0.3);
-    background-color: red;
-    border-radius: 100%; }
-  50% {
-    background-color: green; }
-  100% {
-    transform: scale(1.5);
-    background-color: blue; } }
+@-moz-keyframes thumbTilt {
+    0% {
+        transform: perspective(400px) rotateY(8deg) scale(1);
+        -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+        -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+        -o-transform: perspective(400px) rotateY(8deg) scale(1);
+    }
+    20% {
+        transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+    }
+    100% {
+        transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+    }
+}
 
-@-moz-keyframes stretch {
-  0% {
-    transform: scale(0.3);
-    background-color: red;
-    border-radius: 100%; }
-  50% {
-    background-color: green; }
-  100% {
-    transform: scale(1.5);
-    background-color: blue; } }
+@-o-keyframes thumbTilt {
+    0% {
+        transform: perspective(400px) rotateY(8deg) scale(1);
+        -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+        -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+        -o-transform: perspective(400px) rotateY(8deg) scale(1);
+    }
+    20% {
+        transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+    }
+    100% {
+        transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+    }
+}
 
-@-o-keyframes stretch {
-  0% {
-    transform: scale(0.3);
-    background-color: red;
-    border-radius: 100%; }
-  50% {
-    background-color: green; }
-  100% {
-    transform: scale(1.5);
-    background-color: blue; } }
+@keyframes thumbTilt {
+    0% {
+        transform: perspective(400px) rotateY(8deg) scale(1);
+        -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+        -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+        -o-transform: perspective(400px) rotateY(8deg) scale(1);
+    }
+    20% {
+        transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+        -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+    }
+    100% {
+        transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+        -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+    }
+}
 
-@keyframes stretch {
-  0% {
-    transform: scale(0.3);
-    background-color: red;
-    border-radius: 100%; }
-  50% {
-    background-color: green; }
-  100% {
-    transform: scale(1.5);
-    background-color: blue; } }
+.cssAnimation {
+    background: black;
+}
 
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+.cssAnimation .imageContainer {
+    margin: 0 auto;
+}
 
-@-moz-keyframes opacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+.cssAnimation .imageContainer img {
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    display: inline-block;
+    border: 10px solid pink;
+    opacity: 0.5;
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    -o-opacity: 0.5;
+    transform: perspective(400px) rotateY(8deg) scale(1);
+    -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+    -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+    -o-transform: perspective(400px) rotateY(8deg) scale(1);
+}
 
-@-o-keyframes opacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes opacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.cssAnimation div {
-  width: 250px;
-  height: 250px; }
-
-.cssAnimation .stretch {
-  -webkit-animation: stretch 3s ease-out 3s infinite alternate;;
-  -moz-animation: stretch 3s ease-out 3s infinite alternate;;
-  -o-animation: stretch 3s ease-out 3s infinite alternate;;
-  animation: stretch 3s ease-out 3s infinite alternate;; }
-
-.cssAnimation .opacity {
-  background: green;
-  -webkit-animation: opacity 3s linear 3s infinite alternate;;
-  -moz-animation: opacity 3s linear 3s infinite alternate;;
-  -o-animation: opacity 3s linear 3s infinite alternate;;
-  animation: opacity 3s linear 3s infinite alternate;; }
+.cssAnimation .imageContainer img:hover,
+.cssAnimation .imageContainer img:focus {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    -o-opacity: 1;
+    -webkit-animation: thumbTilt 1s ease-in both;
+    -moz-animation: thumbTilt 1s ease-in both;
+    -o-animation: thumbTilt 1s ease-in both;
+    animation: thumbTilt 1s ease-in both;
+}
