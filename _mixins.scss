@@ -43,7 +43,7 @@ $browser: null;
 @mixin transform($perspective: 400px, $degree: 8deg, $scale: 1) {
     transform: perspective($perspective) rotateY($degree) scale($scale);
     -webkit-transform: perspective($perspective) rotateY($degree) scale($scale);
-    -muz-transform: perspective($perspective) rotateY($degree) scale($scale);
+    -moz-transform: perspective($perspective) rotateY($degree) scale($scale);
     -o-transform: perspective($perspective) rotateY($degree) scale($scale);
 }
 
