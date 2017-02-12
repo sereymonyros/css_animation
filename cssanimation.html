@@ -1,133 +1,137 @@
 <html>
-    <link rel="stylesheet" type="text/css" href="cssanimation.css">
 
-    <!--In case of fallback css -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        @-webkit-keyframes thumbTilt {
-            0% {
+    <head>
+        <link rel="stylesheet" type="text/css" href="cssanimation.css" />
+
+        <!--In case of fallback css -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            @-webkit-keyframes thumbTilt {
+                0% {
+                    transform: perspective(400px) rotateY(8deg) scale(1);
+                    -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -moz-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -o-transform: perspective(400px) rotateY(8deg) scale(1);
+                }
+                20% {
+                    transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -moz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                }
+                100% {
+                    transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -moz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                }
+            }
+            
+            @-moz-keyframes thumbTilt {
+                0% {
+                    transform: perspective(400px) rotateY(8deg) scale(1);
+                    -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -moz-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -o-transform: perspective(400px) rotateY(8deg) scale(1);
+                }
+                20% {
+                    transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -moz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                }
+                100% {
+                    transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -moz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                }
+            }
+            
+            @-o-keyframes thumbTilt {
+                0% {
+                    transform: perspective(400px) rotateY(8deg) scale(1);
+                    -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -moz-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -o-transform: perspective(400px) rotateY(8deg) scale(1);
+                }
+                20% {
+                    transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -moz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                }
+                100% {
+                    transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -moz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                }
+            }
+            
+            @keyframes thumbTilt {
+                0% {
+                    transform: perspective(400px) rotateY(8deg) scale(1);
+                    -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -moz-transform: perspective(400px) rotateY(8deg) scale(1);
+                    -o-transform: perspective(400px) rotateY(8deg) scale(1);
+                }
+                20% {
+                    transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -moz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                    -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+                }
+                100% {
+                    transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -moz-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                    -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
+                }
+            }
+            
+            .cssAnimation {
+                background: black;
+            }
+            
+            .cssAnimation .imageContainer {
+                margin: 0 auto;
+            }
+            
+            .cssAnimation .imageContainer img {
+                width: 400px;
+                height: 200px;
+                margin: 20px;
+                display: inline-block;
+                border: 10px solid pink;
+                opacity: 0.5;
+                -webkit-opacity: 0.5;
+                -moz-opacity: 0.5;
+                -o-opacity: 0.5;
                 transform: perspective(400px) rotateY(8deg) scale(1);
                 -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
-                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
+                -moz-transform: perspective(400px) rotateY(8deg) scale(1);
                 -o-transform: perspective(400px) rotateY(8deg) scale(1);
             }
-            20% {
-                transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
+            
+            .cssAnimation .imageContainer img:hover,
+            .cssAnimation .imageContainer img:focus {
+                opacity: 1;
+                -webkit-opacity: 1;
+                -moz-opacity: 1;
+                -o-opacity: 1;
+                -webkit-animation: thumbTilt 1s ease-in both;
+                -moz-animation: thumbTilt 1s ease-in both;
+                -o-animation: thumbTilt 1s ease-in both;
+                animation: thumbTilt 1s ease-in both;
             }
-            100% {
-                transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
-            }
-        }
-        
-        @-moz-keyframes thumbTilt {
-            0% {
-                transform: perspective(400px) rotateY(8deg) scale(1);
-                -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
-                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
-                -o-transform: perspective(400px) rotateY(8deg) scale(1);
-            }
-            20% {
-                transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-            }
-            100% {
-                transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
-            }
-        }
-        
-        @-o-keyframes thumbTilt {
-            0% {
-                transform: perspective(400px) rotateY(8deg) scale(1);
-                -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
-                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
-                -o-transform: perspective(400px) rotateY(8deg) scale(1);
-            }
-            20% {
-                transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-            }
-            100% {
-                transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
-            }
-        }
-        
-        @keyframes thumbTilt {
-            0% {
-                transform: perspective(400px) rotateY(8deg) scale(1);
-                -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
-                -muz-transform: perspective(400px) rotateY(8deg) scale(1);
-                -o-transform: perspective(400px) rotateY(8deg) scale(1);
-            }
-            20% {
-                transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -webkit-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -muz-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-                -o-transform: perspective(400px) rotateY(-13deg) scale(1.05);
-            }
-            100% {
-                transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -webkit-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -muz-transform: perspective(400px) rotateY(0deg) scale(1.1);
-                -o-transform: perspective(400px) rotateY(0deg) scale(1.1);
-            }
-        }
-        
-        .cssAnimation {
-            background: black;
-        }
-        
-        .cssAnimation .imageContainer {
-            margin: 0 auto;
-        }
-        
-        .cssAnimation .imageContainer img {
-            width: 400px;
-            height: 200px;
-            margin: 20px;
-            display: inline-block;
-            border: 10px solid pink;
-            opacity: 0.5;
-            -webkit-opacity: 0.5;
-            -moz-opacity: 0.5;
-            -o-opacity: 0.5;
-            transform: perspective(400px) rotateY(8deg) scale(1);
-            -webkit-transform: perspective(400px) rotateY(8deg) scale(1);
-            -muz-transform: perspective(400px) rotateY(8deg) scale(1);
-            -o-transform: perspective(400px) rotateY(8deg) scale(1);
-        }
-        
-        .cssAnimation .imageContainer img:hover,
-        .cssAnimation .imageContainer img:focus {
-            opacity: 1;
-            -webkit-opacity: 1;
-            -moz-opacity: 1;
-            -o-opacity: 1;
-            -webkit-animation: thumbTilt 1s ease-in both;
-            -moz-animation: thumbTilt 1s ease-in both;
-            -o-animation: thumbTilt 1s ease-in both;
-            animation: thumbTilt 1s ease-in both;
-        }
-    </style>
+        </style>
+
+    </head>
 
     <body class="cssAnimation">
         <div class="imageContainer">
